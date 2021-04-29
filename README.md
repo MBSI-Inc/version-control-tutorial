@@ -43,5 +43,16 @@ __Activity illustrating text vs binary files__
 
 - __Activity:__ Create a Local Git Repository__
 - __Activity:__ Create and Clone a Remote Repository
+- __Activity:__ Create and resolve conflicts
 
 #### Common Problems with Git and Jupyter Notebooks
+
+- Jupyter notebooks are rendered at HTML in our browsers but on disk they are stored as JSON files on our computers. The JSON files contains metadata about the notebook (e.g. which kernel we are using (language, environment), the Code cells, the Markdown cells, and the output cells. Output cells may well contain binary data (e.g. images) which is a recipe for conflicts
+
+The JSON format can be easy to mess up if we try to edit the JSOn file directly, we are likely to corrupt the JSOn format making the notebook unusable. This makes resolving git conflicts difficult, and it is best to try to avoid as many conflicts as possible.
+
+One of the most straightforward ways of minimizing conflicts is to eliminate the output from the notebooks efore committing them. This can be done manually, but there is a tool we can install to automatically strip the output from a notebook before a changed notebook is added to the git repository.
+
+- [nbstripout](https://pypi.org/project/nbstripout/)
+
+There is a whole ecosystem of tools designed to hlpe with version control of Jupyter notebooks. Some of them are described [here](https://towardsdatascience.com/how-to-version-control-jupyter-notebooks-ccf0be144319).
