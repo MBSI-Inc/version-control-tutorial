@@ -68,13 +68,14 @@ brian$ diff ct4.json ct3.json
 1. Push/Pull (remote only)
 1. Resolve Conflicts
 
+Once you have committed something to your repository, the content is always there unless you delete your repository. So be careful of things like accidentally committing passwords or other confidential information.
+
 ### Git Practice
 
-- __Activity:__ Create a Local Git Repository__ ^[This is simple. All you need to do is type `git init` in a directory that is not already a git repository.]
-- __Activity:__ Create and Clone a Remote Repository^[[Here is GitHub's instructions for this](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)]
-- __Activity:__ Create and resolve conflicts
+- __Activity:__ Create a Local Git Repository <sup id="a1">[1](#f1)</sup>
+- __Activity:__ Create a repository on GitHub and clone this to your comptuer. <sup id="a2">[2](#f2)</sup>
+- __Activity:__ Create and resolve conflicts<sup id="a3">[3](#f3)</sup>
 
-The easiest way to do this is to edit a file (e.g. the README.md file) on GitHub and on your local computer. Make sure you make incompatible changes on the same line. What I did was add the date in one format on GitHub and in a different format on my local computer.
 
 #### Common Problems with Git and Jupyter Notebooks
 
@@ -88,4 +89,12 @@ One of the most straightforward ways of minimizing conflicts is to eliminate the
 
 My suggestion is to install `nbstripout` to be a `global` tool that git always uses when you commit a notebook. (Instructions for this are on the pypi page.)
 
-There is a whole ecosystem of tools designed to hlpe with version control of Jupyter notebooks. Some of them are described [here](https://towardsdatascience.com/how-to-version-control-jupyter-notebooks-ccf0be144319).
+There is a whole ecosystem of tools designed to help with version control of Jupyter notebooks. Some of them are described [here](https://towardsdatascience.com/how-to-version-control-jupyter-notebooks-ccf0be144319).
+
+
+---------------
+<b id="f1">1</b> This is simple. All you need to do is type `git init` in a directory that is not already a git repository. [↩](#a1)
+
+<b id="f2">2</b> [Here is GitHub's instructions for this](https://docs.github.com/en/github/getting-started-with-github/create-a-repo) [↩](#a2)
+
+<b id="f3">3</b> The easiest way to do this is to edit a file (e.g. the README.md file) on GitHub and on your local computer. Make sure you make incompatible changes on the same line. What I did was add the date in one format on GitHub and in a different format on my local computer.[↩](#a3)
